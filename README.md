@@ -125,3 +125,71 @@ This project will continue to grow as I add:
 - DHCP
 - PowerShell
 - Security Monitoring
+
+
+
+---
+
+# Project Phases
+
+## Phase 1 - Environment Setup
+
+- VirtualBox installation
+- Virtual machine creation
+- Operating system installation
+- Network configuration
+
+## Phase 2 - Active Directory Deployment
+
+- Installing Active Directory Domain Services
+- Promoting Windows Server to Domain Controller
+- Configuring DNS
+- Creating domain structure
+
+## Phase 3 - User and Computer Management
+
+- Creating Organizational Units
+- Creating users
+- Creating security groups
+- Joining clients to domain
+
+## Phase 4 - Security Hardening
+
+- Group Policy implementation
+- Permissions management
+- Logging and monitoring
+
+## Phase 5 - Security Investigation
+
+- Event Viewer analysis
+- Authentication troubleshooting
+- SIEM integration
+
+---
+
+# Skills Demonstrated
+
+- Active Directory Administration
+- Windows Server Management
+- DNS Troubleshooting
+- Identity and Access Management
+- User Administration
+- Security Fundamentals
+- Technical Documentation
+
+Cybersecurity-Home-Lab
+
+│
+├── README.md
+│
+├── Phase-1-Environment-Setup
+│
+├── Phase-2-Active-Directory-Deployment
+│
+├── Phase-3-Users-Groups-Permissions
+│
+├── Phase-4-Group-Policy
+│
+├── Phase-5-Security-Monitoring
+│
+└── Troubleshooting
