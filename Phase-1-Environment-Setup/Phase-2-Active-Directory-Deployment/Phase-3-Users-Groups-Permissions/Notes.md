@@ -35,7 +35,11 @@ They allow administrators to:
 
 The following Organizational Units were created:
 sancalab.local
-├── Finance ├── IT ├── ForeignSecurity └── PCs
+Finance
+IT
+HR
+Sales
+PCs
 
 
 ---
@@ -64,6 +68,7 @@ Name: David Brown
 Username: David.brown
 Domain: SANCALAB
 Full login format: SANCALAB\David.brown
+
 ---
 
 # Security Groups
@@ -98,8 +103,8 @@ During this phase, the following Active Directory group types were explored:
 
 Used to organize users from the same domain who share similar responsibilities.
 
-Example:
-Finance_Users
+Example: Finance_Users
+
 ---
 
 ## Domain Local Group
@@ -122,15 +127,15 @@ Used mainly for email communication and does not provide permissions.
 
 A Windows 11 client machine was joined to the Active Directory domain.
 
-Domain:sancalab.local
+Domain: sancalab.local
+
 ---
 
 # Domain Login Testing
 
 After joining the domain, authentication was tested using:
 
-User:
-SANCALAB\David.brown
+User: SANCALAB\David.brown
 Successful login confirmed:
 
 - Domain communication was working
@@ -145,8 +150,8 @@ The lab simulated company resource access.
 
 Example:
 
-Finance shared folder:Finance Shared Folder
-Access was assigned through:Finance_Users
+Finance shared folder: Finance Shared Folder
+Access was assigned through: Finance_Users
 This demonstrates the principle of managing permissions through groups rather than individual accounts.
 
 ---
