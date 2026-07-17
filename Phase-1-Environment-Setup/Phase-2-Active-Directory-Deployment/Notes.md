@@ -62,7 +62,7 @@ The Domain Controller was configured with a static IP address.
 
 Configuration:
 
-IP Address:192.168.10.10
+IP Address: 192.168.10.10
 
 
 Reason:
@@ -94,7 +94,7 @@ Purpose of OUs:
 - Organize departments
 - Simplify administration
 
-Examples:Finance IT ForeignSecurity
+Examples: Finance IT ForeignSecurity
 
 
 ---
@@ -115,12 +115,10 @@ The account was later used to test domain login functionality.
 
 Security groups were created to manage permissions.
 
-Example:Finance_Users
+Example: Finance_Users
 
 
-Purpose:
-
-Instead of assigning permissions individually to users, groups allow administrators to manage access more efficiently.
+Purpose: Instead of assigning permissions individually to users, groups allow administrators to manage access more efficiently.
 
 ---
 
@@ -128,14 +126,10 @@ Instead of assigning permissions individually to users, groups allow administrat
 
 ## Domain Join Issue
 
-Problem:
-
-A Windows client initially could not locate the domain:An Active Directory Domain Controller for the domain sancalab.local could not be contacted.
+Problem: A Windows client initially could not locate the domain:An Active Directory Domain Controller for the domain sancalab.local could not be contacted.
 
 
-Cause:
-
-DNS communication issue.
+Cause: DNS communication issue.
 
 Active Directory relies on DNS to locate the Domain Controller.
 
