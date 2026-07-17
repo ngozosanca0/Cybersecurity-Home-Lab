@@ -5,20 +5,69 @@ Hands-on Active Directory, Windows Server and Cybersecurity Home Lab.
 
 ## Overview
 
-This repository documents my hands-on cybersecurity and system administration home lab built using VirtualBox.
+This project documents the design, configuration, troubleshooting, and security testing of a virtual enterprise-style environment.
 
-The purpose of this lab is to gain practical experience with enterprise Windows environments, Active Directory, networking, troubleshooting and cybersecurity concepts.
+The purpose of this lab is to gain practical experience with:
 
-## Lab Environment
+- Windows Server Administration
+- Active Directory Domain Services (AD DS)
+- DNS
+- DHCP
+- Organizational Units (OUs)
+- Security Groups
+- Group Policy Objects (GPO)
+- Windows Client Domain Joining
+- User and Permission Management
+- Security Monitoring and Incident Investigation
 
-### Virtualization
+This lab is designed to simulate a small business environment and demonstrate hands-on skills relevant to IT Support, System Administration, and Cybersecurity roles.
+
+---
+
+# Lab Objectives
+
+The goals of this project are:
+
+- Build a Windows Server domain controller
+- Configure Active Directory
+- Create users, groups, and organizational units
+- Join Windows clients to the domain
+- Implement access control and permissions
+- Practice troubleshooting common enterprise issues
+- Document technical processes and solutions
+
+---
+
+# Lab Environment
+
+## Virtualization Platform
+
 - Oracle VirtualBox
 
-### Operating Systems
-- Windows Server 2022
-- Windows 11
+## Host Machine
 
-### Domain
+- Operating System: Windows 11
+- Processor: Intel Core i5 11th Generation
+- RAM: 16GB
+- Storage: 477GB available space
+
+## Virtual Machines
+
+| Machine | Operating System | Purpose |
+|---|---|---|
+| DC01 | Windows Server 2022 | Domain Controller |
+| Client01 | Windows 11 | Domain Client |
+
+---
+
+# Network Design
+
+| Device | IP Address | Role |
+|---|---|---|
+| DC01 | 192.168.10.10 | Domain Controller / DNS Server |
+| Client01 | 192.168.10.20 | Domain Client |
+
+Domain Name:
 - sancalab.local
 
 ### Systems
