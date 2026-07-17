@@ -177,19 +177,3 @@ This project will continue to grow as I add:
 - Security Fundamentals
 - Technical Documentation
 
-Cybersecurity-Home-Lab
-
-│
-├── README.md
-│
-├── Phase-1-Environment-Setup
-│
-├── Phase-2-Active-Directory-Deployment
-│
-├── Phase-3-Users-Groups-Permissions
-│
-├── Phase-4-Group-Policy
-│
-├── Phase-5-Security-Monitoring
-│
-└── Troubleshooting
