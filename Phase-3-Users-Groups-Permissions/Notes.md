@@ -1,217 +1,133 @@
-# Phase 3 - Users, Groups, and Permissions
+Phase 3 - User and Computer Management
 
-## Objective
+Overview
 
-The objective of this phase was to configure Active Directory objects used in a real organization.
+In this phase, I configured the Active Directory environment by creating and organizing users, security groups, computers, and Organizational Units (OUs). I also implemented a Group Policy Object (GPO) to apply a basic security setting to domain-joined computers.
 
-This included:
-
-- Creating Organizational Units (OUs)
-- Creating user accounts
-- Creating security groups
-- Managing permissions
-- Testing domain user authentication
-
-The purpose was to simulate how companies manage employee accounts and access to resources.
+This phase focused on identity and access management, Active Directory organization, and centralized administration.
 
 ---
 
-# Organizational Units (OUs)
+Objectives
 
-## Overview
-
-Organizational Units are containers inside Active Directory used to organize users, computers, and groups.
-
-They allow administrators to:
-
-- Apply Group Policies
-- Organize departments
-- Delegate administrative tasks
-- Manage objects efficiently
+- Create departmental Organizational Units (OUs)
+- Create domain users
+- Create security groups
+- Assign users to security groups
+- Join a Windows 11 client to the domain
+- Organize Active Directory using a structured OU hierarchy
+- Configure and verify a Group Policy Object (GPO)
 
 ---
 
-# OU Structure Created
+OU Structure
 
-The following Organizational Units were created: sancalab.local, IT, PCs, Sales, HR 
+sancalab.local
 
----
-
-# Why OUs Were Created
-
-In an enterprise environment, users are separated based on departments and responsibilities.
-
-Example:
-
-Finance users may require access to financial resources.
-
-IT users may require administrative permissions.
-
-Separating objects into OUs makes management easier and improves security.
-
----
-
-# User Account Creation
-
-User accounts were created to represent employees inside the domain.
-
-Example:
-
-Name: David Brown
-
-Username: David.brown
-
-Domain: SANCALAB
-
-Full login format: SANCALAB\David.brown
+├── Company Users
+│
+│   ├── Finance
+│   ├── HR
+│   ├── IT
+│   └── Sales
+│
+├── Company Computers
+│
+│   ├── Finance
+│   ├── HR
+│   ├── IT
+│   └── Sales
+│
+└── Groups
+    ├── Finance
+    ├── HR
+    ├── IT
+    └── Sales
 
 ---
 
-# Security Groups
+Users Created
 
-## Purpose
+Finance
 
-Security groups are used to assign permissions to multiple users instead of configuring every user individually.
+- David Brown
 
-Example:
+HR
 
-Instead of giving access to each Finance employee: David Brown Sarah Smith John Williams 
+- Mary Jones
+- Sarah Johnson
 
-Permissions are assigned to: Finance_Users
+IT
 
-Any member added to the group automatically receives the assigned permissions.
+- John Smith
+- Michael Smith
 
----
+Sales
 
-# Groups Created
-
-Example: Finance_Users
-
-Location: Finance OU
-
-Purpose:
-
-Manage access for Finance department users.
+- Sarah Williams
+- Emily Davis
 
 ---
 
-# Group Types Learned
+Security Groups
 
-During this phase, the following Active Directory group types were explored:
+- Finance_Users
+- HR_Users
+- IT_Users
+- Sales_Users
 
-## Global Group
-
-Used to organize users from the same domain who share similar responsibilities.
-
-Example: Finance_Users
-
----
-
-## Domain Local Group
-
-Used to assign permissions to resources.
-
-Example:
-
-A shared folder permission group.
+Each user was added to the appropriate departmental security group.
 
 ---
 
-## Distribution Group
+Computer Management
 
-Used mainly for email communication and does not provide permissions.
-
----
-
-# Domain Client Joining
-
-A Windows 11 client machine was joined to the Active Directory domain.
-
-Domain: sancalab.local
+- Joined Client01 (Windows 11) to the "sancalab.local" domain.
+- Moved Client01 into the appropriate Organizational Unit under Company Computers.
 
 ---
 
-# Domain Login Testing
+Group Policy Configuration
 
-After joining the domain, authentication was tested using:
+Created a Group Policy Object:
 
-User: SANCALAB\David.brown
+- PC Security Baseline
 
-Successful login confirmed:
+Configured:
 
-- Domain communication was working
-- DNS resolution was working
-- User authentication was successful
+- Disabled the built-in Guest account.
 
----
+Verified policy deployment using:
 
-# Permission Management
+gpupdate /force
+gpresult /scope computer /r
 
-The lab simulated company resource access.
-
-Example:
-
-Finance shared folder: Finance Shared Folder
-
-Access was assigned through: Finance_Users
-
-This demonstrates the principle of managing permissions through groups rather than individual accounts.
+Confirmed that the Group Policy was successfully applied to Client01.
 
 ---
 
-# Security Concepts Demonstrated
+Skills Demonstrated
 
-## Least Privilege
-
-Users should only receive the access required to perform their job.
-
-Example:
-
-Finance users should not automatically receive IT administrator permissions.
-
----
-
-## Identity and Access Management (IAM)
-
-Active Directory was used to manage:
-
-- User identities
-- Authentication
-- Authorization
-- Resource access
+- Active Directory Users and Computers
+- Organizational Unit Management
+- User Administration
+- Security Group Administration
+- Computer Account Management
+- Domain Administration
+- Group Policy Management
+- Identity and Access Management (IAM)
+- Windows Administration
+- Troubleshooting Group Policy
 
 ---
 
-# Troubleshooting
+Screenshots
 
-## Login Issue
-
-Problem:
-
-Unable to authenticate using the domain account.
-
-Investigation:
-
-Checked:
-
-- Domain name
-- User account
-- Domain Controller availability
-- Network connectivity
-
-Resolution:
-
-Confirmed the correct login format: SANCALAB\username
-
----
-
-# Lessons Learned
-
-During this phase I learned:
-
-- How organizations structure Active Directory
-- How users and groups are managed
-- Why security groups are important
-- How permissions are assigned
-- How domain authentication works
-- The importance of least privilege
+- Organizational Units
+- Users Created
+- Finance Security Group
+- Windows 11 Joined Domain
+- Client01 Moved to Company Computers OU
+- Group Policy Applied Verification
+- Guest Account Disabled by Group Policy
+- Final Active Directory OU Structure
