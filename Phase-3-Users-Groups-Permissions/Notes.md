@@ -38,35 +38,21 @@ OUs allow administrators to:
 
 The Active Directory environment was reorganized into a structured design separating users, computers, and groups.
 
-sancalab.local
-Company Users
-Finance
-└── David Brown
-HR
-├── Mary Jones
-└── Sarah Johnson
-IT
-├── John Smith
-└── Michael Smith
-Sales
-├── Sarah Williams
-└── Emily Davis 
+# sancalab.local
+# Company Users
+- Finance: David Brown
+- HR: Mary Jones,Sarah Johnson
+- IT: John Smith, Michael Smith
+- Sales: Sarah Williams, Emily Davis 
 
-Company Computers
+# Company Computers
+- IT: Client01 
 
-IT
-└── Client01 
-
-Groups
-
-Finance
-└── Finance_Users
-   ├── HR
-      └── HR_Users
-   ├── IT
-      └── IT_Users
-   └── Sales
-      └── Sales_Users
+# Groups
+- Finance: Finance_Users
+- HR: HR_Users
+- IT: IT_Users
+- Sales: Sales_Users
 
 ---
 
