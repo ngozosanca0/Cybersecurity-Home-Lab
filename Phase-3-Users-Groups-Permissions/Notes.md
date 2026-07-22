@@ -1,156 +1,323 @@
 
-# Phase 3 - User and Computer Management
+# Phase 3 - Users, Groups, and Permissions
+
+## Objective
+
+The objective of this phase was to configure and manage Active Directory objects used in a real organization.
+
+This phase focused on:
+
+- Creating Organizational Units (OUs)
+- Creating and managing user accounts
+- Creating security groups
+- Assigning users to groups
+- Managing computer accounts
+- Joining Windows clients to the domain
+- Testing authentication and access control
+
+The purpose was to simulate how organizations manage users, computers, and permissions using Active Directory.
+
+---
+
+# Organizational Units (OUs)
 
 ## Overview
 
-In this phase, I configured the Active Directory environment by creating and organizing users, security groups, computers, and Organizational Units (OUs). I also implemented a Group Policy Object (GPO) to apply a basic security setting to domain-joined computers.
+Organizational Units (OUs) are containers inside Active Directory used to organize users, computers, and groups.
 
-This phase focused on identity and access management, Active Directory organization, and centralized administration.
+OUs allow administrators to:
 
----
-
-## Objectives
-
-- Create departmental Organizational Units (OUs)
-- Create domain users
-- Create security groups
-- Assign users to security groups
-- Join a Windows 11 client to the domain
-- Organize Active Directory using a structured OU hierarchy
-- Configure and verify a Group Policy Object (GPO)
+- Apply Group Policy settings
+- Organize objects based on business requirements
+- Delegate administrative tasks
+- Manage resources efficiently
 
 ---
 
-## OU Structure
+# Active Directory OU Structure
 
-```text
+The Active Directory environment was reorganized into a structured design separating users, computers, and groups.
+
 sancalab.local
 
-├── Company Users
-│
-│   ├── Finance
-│   ├── HR
-│   ├── IT
-│   └── Sales
-│
-├── Company Computers
-│
-│   ├── Finance
-│   ├── HR
-│   ├── IT
-│   └── Sales
-│
-└── Groups
-    ├── Finance
-    ├── HR
-    ├── IT
-    └── Sales
-
+├── Company Users │ │   ├── Finance │   │     └── David Brown │   │ │   ├── HR │   │     ├── Mary Jones │   │     └── Sarah Johnson │   │ │   ├── IT │   │     ├── John Smith │   │     └── Michael Smith │   │ │   └── Sales │         ├── Sarah Williams │         └── Emily Davis │ ├── Company Computers │ │   └── IT │         └── Client01 │ └── Groups │ ├── Finance │     └── Finance_Users │ ├── HR │     └── HR_Users │ ├── IT │     └── IT_Users │ └── Sales └── Sales_Users
 
 ---
 
-Users Created
+# User Account Management
 
-Finance
+User accounts were created to represent employees within different departments.
 
-David Brown
+## Finance Department
 
-
-HR
-
-Mary Jones
-
-Sarah Johnson
-
-
-IT
-
-John Smith
-
-Michael Smith
-
-
-Sales
-
-Sarah Williams
-
-Emily Davis
-
-
+| Name | Username |
+|---|---|
+| David Brown | dbrown |
 
 ---
 
-Security Groups
+## HR Department
 
-Created departmental security groups:
+| Name | Username |
+|---|---|
+| Mary Jones | mjones |
+| Sarah Johnson | sjohnson |
+
+---
+
+## IT Department
+
+| Name | Username |
+|---|---|
+| John Smith | jsmith |
+| Michael Smith | msmith |
+
+---
+
+## Sales Department
+
+| Name | Username |
+|---|---|
+| Sarah Williams | swilliams |
+| Emily Davis | edavis |
+
+---
+
+# Security Groups
+
+## Purpose
+
+Security groups are used to manage permissions efficiently.
+
+Instead of assigning permissions to individual users, administrators assign permissions to groups.
+
+Example:
+
+Instead of assigning Finance folder access individually to every Finance employee:
+
+- David Brown
+- Future Finance employees
+
+Access can be assigned to:
 
 Finance_Users
 
-HR_Users
-
-IT_Users
-
-Sales_Users
-
-
-Users were added to the appropriate security groups based on their departments.
-
+Any user added to the group automatically receives the assigned permissions.
 
 ---
 
-Computer Management
+# Security Groups Created
 
-Joined Windows 11 Client01 to the sancalab.local domain.
-
-Moved Client01 into the appropriate Organizational Unit under Company Computers.
-
-
+| Department | Security Group |
+|---|---|
+| Finance | Finance_Users |
+| HR | HR_Users |
+| IT | IT_Users |
+| Sales | Sales_Users |
 
 ---
 
-Group Policy Configuration
+# Group Membership
 
-Created a Group Policy Object:
+Users were assigned to security groups based on their departments.
+
+Finance_Users └── David Brown
+
+HR_Users ├── Mary Jones └── Sarah Johnson
+
+IT_Users ├── John Smith └── Michael Smith
+
+Sales_Users ├── Sarah Williams └── Emily Davis
+
+---
+
+# Domain Client Joining
+
+A Windows 11 client machine was joined to the Active Directory domain.
+
+## Client Information
+
+| Computer | Operating System | Purpose |
+|---|---|---|
+| Client01 | Windows 11 | Domain Client |
+
+---
+
+# Domain Information
+
+Domain:
+
+sancalab.local
+
+Domain login format:
+
+SANCALAB\username
+
+Example:
+
+SANCALAB\David.brown
+
+Successful login confirmed:
+
+- Domain communication was working
+- DNS resolution was working
+- User authentication was successful
+
+---
+
+# Computer Account Management
+
+Client01 was moved from the default computer container into the managed computer OU structure.
+
+Current location:
+
+Company Computers
+
+└── IT └── Client01
+
+This allows administrators to apply computer-based policies through Group Policy.
+
+---
+
+# Group Policy Management
+
+A Group Policy Object (GPO) was created to apply security settings to domain computers.
+
+## Created GPO
 
 PC Security Baseline
 
-Configured security setting:
+---
 
-Disabled the built-in Guest account.
+# Security Setting Implemented
 
+The following security setting was configured:
 
-Policy verification was performed using:
+Computer Configuration
 
+└── Policies
+
+└── Windows Settings
+
+    └── Security Settings
+
+        └── Local Policies
+
+            └── Security Options
+
+                └── Accounts: Guest account status
+
+                    └── Disabled
+
+---
+
+# Group Policy Verification
+
+The policy was updated on the client machine using:
+
+```cmd
 gpupdate /force
 
-and:
+The applied policies were verified using:
 
 gpresult /scope computer /r
 
-The policy was successfully applied to Client01.
+The PC Security Baseline policy was successfully applied to Client01.
 
 
 ---
 
-Skills Demonstrated
+Permission Management
 
-Active Directory Users and Computers
+The lab simulated company resource access using security groups.
 
-Organizational Unit Management
+Example:
 
-User Administration
+Finance users were managed through:
 
-Security Group Administration
+Finance_Users
 
-Computer Account Management
+This demonstrates the practice of assigning permissions to groups instead of individual users.
 
-Group Policy Management
+
+---
+
+Security Concepts Demonstrated
+
+Least Privilege
+
+Users should only receive the access required to perform their job responsibilities.
+
+Example:
+
+Finance users should not automatically receive IT administrative permissions.
+
+
+---
 
 Identity and Access Management (IAM)
 
-Windows Server Administration
+Active Directory was used to manage:
 
-Troubleshooting Group Policy
+User identities
+
+Authentication
+
+Authorization
+
+Resource access
+
+
+
+---
+
+Troubleshooting
+
+Domain Login Troubleshooting
+
+Problem:
+
+Unable to authenticate using a domain account.
+
+Checked:
+
+Domain name
+
+User account
+
+Domain Controller availability
+
+Network connectivity
+
+DNS configuration
+
+
+Resolution:
+
+Confirmed the correct login format:
+
+SANCALAB\username
+
+
+---
+
+Lessons Learned
+
+During this phase I learned:
+
+How organizations structure Active Directory
+
+How to manage users and computers
+
+How security groups simplify permissions
+
+How domain authentication works
+
+How OU structure affects administration
+
+How Group Policy is applied to computers
+
+The importance of identity and access management
 
 
 
@@ -158,18 +325,24 @@ Troubleshooting Group Policy
 
 Screenshots
 
-Organizational Units
+01 - DC01 Domain Controller
 
-Users Created
+02 - Organizational Units
 
-Finance Security Group
+03 - First Active Directory User
 
-Windows 11 Joined Domain
+04 - Users Created
 
-Final Active Directory OU Structure
+05 - Finance Security Group
 
-Group Policy Applied Verification
+06 - Windows 11 Joined Domain
 
-Guest Account Disabled by GPO
+11 - Group Policy Applied Verification
+
+12 - Guest Account Disabled by GPO
+
+13 - GPO After OU Restructure Verification
+
+14 - Final Active Directory OU Structure
 
 
