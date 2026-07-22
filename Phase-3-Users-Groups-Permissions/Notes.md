@@ -39,7 +39,7 @@ OUs allow administrators to:
 The Active Directory environment was reorganized into a structured design separating users, computers, and groups.
 
 # sancalab.local
-# Company Users
+### Company Users
 - Finance: David Brown
 - HR: Mary Jones,Sarah Johnson
 - IT: John Smith, Michael Smith
