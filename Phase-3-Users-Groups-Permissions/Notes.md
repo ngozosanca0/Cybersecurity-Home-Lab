@@ -283,78 +283,46 @@ Resource access
 
 ---
 
-Troubleshooting
+# Troubleshooting
 
-Domain Login Troubleshooting
+## Domain Login Troubleshooting
 
-Problem:
-
-Unable to authenticate using a domain account.
+Problem: Unable to authenticate using a domain account.
 
 Checked:
-
-Domain name
-
-User account
-
-Domain Controller availability
-
-Network connectivity
-
-DNS configuration
-
+- Domain name
+- User account
+- Domain Controller availability
+- Network connectivity
+- DNS configuration
 
 Resolution:
-
-Confirmed the correct login format:
-
-SANCALAB\username
-
-
+Confirmed the correct login format: SANCALAB\username
 ---
 
-Lessons Learned
+# Lessons Learned
 
-During this phase I learned:
-
-How organizations structure Active Directory
-
-How to manage users and computers
-
-How security groups simplify permissions
-
-How domain authentication works
-
-How OU structure affects administration
-
-How Group Policy is applied to computers
-
-The importance of identity and access management
-
-
-
+During this phase I learned: 
+- How organizations structure Active Directory
+- How to manage users and computers
+- How security groups simplify permissions
+- How domain authentication works
+- How OU structure affects administration
+- How Group Policy is applied to computers
+- The importance of identity and access management
 ---
 
-Screenshots
+## Screenshots
 
-01 - DC01 Domain Controller
-
-02 - Organizational Units
-
-03 - First Active Directory User
-
-04 - Users Created
-
-05 - Finance Security Group
-
-06 - Windows 11 Joined Domain
-
-11 - Group Policy Applied Verification
-
-12 - Guest Account Disabled by GPO
-
-13 - GPO After OU Restructure Verification
-
-14 - Final Active Directory OU Structure
+- 01: DC01 Domain Controller
+- 02: Organizational Units
+- 03: First Active Directory User
+- 04: Users Created
+- 05: Finance Security Group
+- 06: Windows 11 Joined Domain
+- 11: Group Policy Applied Verification
+- 12: Guest Account Disabled by GPO
+- 13: GPO After OU Restructure Verification
+- 14: Final Active Directory OU Structure
 
 
