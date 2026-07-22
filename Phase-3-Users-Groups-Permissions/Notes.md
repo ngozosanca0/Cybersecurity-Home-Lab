@@ -220,7 +220,6 @@ Computer Configuration
                 └── Accounts: Guest account status
 
                     └── Disabled
-
 ---
 
 # Group Policy Verification
