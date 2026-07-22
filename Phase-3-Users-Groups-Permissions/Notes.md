@@ -224,61 +224,42 @@ Computer Configuration
 
 # Group Policy Verification
 
-The policy was updated on the client machine using:
+The policy was updated on the client machine using: gpupdate /force
 
-```cmd
-gpupdate /force
-
-The applied policies were verified using:
-
-gpresult /scope computer /r
+The applied policies were verified using: gpresult /scope computer /r
 
 The PC Security Baseline policy was successfully applied to Client01.
 
-
 ---
 
-Permission Management
+# Permission Management
 
 The lab simulated company resource access using security groups.
 
 Example:
-
-Finance users were managed through:
-
-Finance_Users
+Finance users were managed through: Finance_Users
 
 This demonstrates the practice of assigning permissions to groups instead of individual users.
 
-
 ---
 
-Security Concepts Demonstrated
+# Security Concepts Demonstrated
 
-Least Privilege
+## Least Privilege
 
 Users should only receive the access required to perform their job responsibilities.
 
-Example:
-
-Finance users should not automatically receive IT administrative permissions.
-
+Example: Finance users should not automatically receive IT administrative permissions.
 
 ---
 
-Identity and Access Management (IAM)
+## Identity and Access Management (IAM)
 
 Active Directory was used to manage:
-
-User identities
-
-Authentication
-
-Authorization
-
-Resource access
-
-
+- User identities
+- Authentication
+- Authorization
+- Resource access
 
 ---
 
