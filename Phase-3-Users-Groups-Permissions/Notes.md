@@ -44,3 +44,90 @@ sancalab.local
     ├── HR
     ├── IT
     └── Sales
+
+## Users Created
+
+### Finance
+
+- David Brown
+
+### HR
+
+- Mary Jones
+- Sarah Johnson
+
+### IT
+
+- John Smith
+- Michael Smith
+
+### Sales
+
+- Sarah Williams
+- Emily Davis
+
+
+---
+
+## Security Groups
+
+Created departmental security groups:
+
+- Finance_Users
+- HR_Users
+- IT_Users
+- Sales_Users
+
+Users were added to the appropriate security groups based on their departments.
+
+
+---
+
+## Computer Management
+
+- Joined Windows 11 Client01 to the `sancalab.local` domain.
+- Moved Client01 into the appropriate Organizational Unit under Company Computers.
+
+
+---
+
+## Group Policy Configuration
+
+Created a Group Policy Object:
+
+**PC Security Baseline**
+
+Configured security setting:
+
+- Disabled the built-in Guest account.
+
+Policy verification was performed using:
+
+```cmd
+gpupdate /force
+
+and:
+
+gpresult /scope computer /r
+
+The policy was successfully applied to Client01.
+
+# Skills Demonstrated
+- Active Directory Users and Computers
+- Organizational Unit Management
+- User Administration
+- Security Group Administration
+- Computer Account Management
+- Group Policy Management
+- Identity and Access Management (IAM)
+- Windows Server Administration
+- Troubleshooting Group Policy
+
+# Screenshots
+- Organizational Units
+- Users Created
+- Finance Security Group
+- Windows 11 Joined Domain
+- Final Active Directory OU Structure
+- Group Policy Applied Verification
+- Guest Account Disabled by GPO
