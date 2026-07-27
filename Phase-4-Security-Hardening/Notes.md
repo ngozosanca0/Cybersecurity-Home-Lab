@@ -164,7 +164,6 @@ Monitoring when users are added or removed from groups.
 After configuring the Security Baseline GPO, the policy was updated on Client01.
 
 Command used: gpupdate /force
-
 The applied policies were verified using: gpresult /scope computer /r
 
 Verification confirmed: Security Baseline
