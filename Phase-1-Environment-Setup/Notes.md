@@ -151,3 +151,12 @@ During this phase I learned:
 - Basic network planning
 - Importance of static IP addresses for servers
 - Troubleshooting virtual machine problems
+
+---
+
+# Screenshots
+
+- 01 - DC01 Domain Controller
+- 02 - VirtualBox Network Configuration
+- 03 - Client01 Virtual Machine Setup
+- 04 - Windows Server 2022 Installation
