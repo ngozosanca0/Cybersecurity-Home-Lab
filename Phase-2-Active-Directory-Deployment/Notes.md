@@ -159,3 +159,11 @@ During this phase I learned:
 - How domains authenticate users
 - How OUs and groups improve administration
 - How to troubleshoot domain communication issues
+
+# Screenshots
+
+- 02 - Organizational Units
+- 03 - First Active Directory User
+- 04 - Users Created
+- 05 - Finance Security Group
+- 06 - Windows 11 Joined Domain
