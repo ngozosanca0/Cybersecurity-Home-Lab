@@ -169,3 +169,100 @@ The applied policies were verified using: gpresult /scope computer /r
 
 Verification confirmed: Security Baseline
 was successfully applied to Client01.
+
+# Event Viewer Investigation
+
+Windows Security logs were reviewed using:
+
+```
+Event Viewer
+
+Windows Logs
+└── Security
+```
+
+The Security log was used to investigate authentication-related events generated during testing.
+
+---
+
+# Security Event Testing
+
+A failed authentication attempt was generated and investigated.
+
+The Security log was filtered using:
+
+```
+4625
+```
+
+to identify failed logon events.
+
+Example findings:
+
+```
+Event ID: 4625
+
+Account Name: Client01$
+
+Failure Reason: Unknown user name or bad password
+
+Logon Type: 2 (Interactive)
+```
+
+---
+
+# Security Concepts Demonstrated
+
+## Defense in Depth
+
+Multiple security controls were implemented, including:
+
+- Strong password requirements
+- Account lockout protection
+- Windows security auditing
+- Group Policy enforcement
+
+---
+
+## Identity and Access Management (IAM)
+
+Active Directory was used to manage:
+
+- User identities
+- Authentication
+- Authorization
+- Access control
+
+---
+
+## Security Monitoring
+
+Windows auditing was configured to generate security events for authentication and account management activities.
+
+These events can be reviewed in Event Viewer or forwarded to centralized monitoring platforms such as Microsoft Sentinel, Splunk, Wazuh, or other SIEM solutions.
+
+---
+
+# Lessons Learned
+
+During this phase I learned:
+
+- How Group Policy can enforce security settings across domain-joined computers
+- How password policies strengthen account security
+- How account lockout policies help mitigate brute-force attacks
+- How Windows auditing generates security events for investigation
+- How Event Viewer can be used to analyse authentication events
+- The importance of centralized log collection and security monitoring
+
+---
+
+# Screenshots
+
+- 07 - Security Baseline GPO Created
+- 08 - Security Baseline Linked to Company Computers
+- 09 - Password Policy Configuration
+- 10 - Account Lockout Policy Configuration
+- 11 - Advanced Audit Policy Configuration
+- 12 - Security Baseline Applied (gpresult)
+- 13 - Event Viewer Security Log
+- 14 - Event ID 4625 Failed Logon Investigation
