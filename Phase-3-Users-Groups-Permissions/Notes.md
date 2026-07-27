@@ -295,11 +295,23 @@ During this phase I learned:
 
 # Screenshots
 
-- 03: First Active Directory User
-- 04: Users Created
-- 05: Finance Security Group
-- 06: Windows 11 Joined Domain
-- 11: Group Policy Applied Verification
-- 12: Guest Account Disabled by GPO
-- 13: GPO After OU Restructure Verification
-- 14: Final Active Directory OU Structure
+## User and Group Management
+
+- 03 - First Active Directory User
+- 04 - Users Created
+- 05 - Finance Security Group
+- 06 - Windows 11 Joined Domain
+
+## File Sharing and Permissions
+
+- 07 - Finance Shared Folder
+- 08 - Finance Share Permissions
+- 09 - NTFS Permissions
+- 10 - Finance Folder Access Test
+
+## Group Policy
+
+- 11 - Group Policy Applied Verification
+- 12 - Guest Account Disabled by GPO
+- 13 - GPO After OU Restructure Verification
+- 14 - Final Active Directory OU Structure
