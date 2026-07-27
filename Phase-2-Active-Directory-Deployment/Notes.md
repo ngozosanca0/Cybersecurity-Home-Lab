@@ -12,7 +12,9 @@ The goal was to simulate how organizations manage users, computers, authenticati
 
 ## Server Name
 
-The Windows Server virtual machine was configured with the hostname: sancalab.local
+The Windows Server virtual machine was configured as the Domain Controller (DC01) for the domain:
+
+sancalab.local
 
 This created the first domain controller for the environment.
 
