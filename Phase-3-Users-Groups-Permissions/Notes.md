@@ -290,12 +290,11 @@ During this phase I learned:
 - How OU structure affects administration
 - How Group Policy is applied to computers
 - The importance of identity and access management
+
 ---
 
-## Screenshots
+# Screenshots
 
-- 01: DC01 Domain Controller
-- 02: Organizational Units
 - 03: First Active Directory User
 - 04: Users Created
 - 05: Finance Security Group
@@ -304,5 +303,3 @@ During this phase I learned:
 - 12: Guest Account Disabled by GPO
 - 13: GPO After OU Restructure Verification
 - 14: Final Active Directory OU Structure
-
-
